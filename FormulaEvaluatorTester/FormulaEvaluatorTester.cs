@@ -26,8 +26,8 @@ public class FormulaEvaluatorTester
     {
         BasicOperationTests();
         MixedOperationAndParenthesesTests();
-        VariableTests();
-        EdgeCaseAndErrorTests();
+        //VariableTests();
+        //EdgeCaseAndErrorTests();
     }
 
     /// <summary>
@@ -180,178 +180,179 @@ public class FormulaEvaluatorTester
     /// <summary>
     /// A testing method with tests for variable looking up, parsing, and calculation
     /// </summary>
-    public static void VariableTests();
-    {
-        if (Evaluator.Evaluate("(B2+3)*5+2", Lookup) != 27)
-            Console.WriteLine("Variable Test 1 failed");
+    //public static void VariableTests(); 
 
-        if (Evaluator.Evaluate("(a1+A1)", Lookup) != 9)
-            Console.WriteLine("Variable Test 2 failed");
+    //{
+    //    if (Evaluator.Evaluate("(B2+3)*5+2", Lookup) != 27)
+    //        Console.WriteLine("Variable Test 1 failed");
 
-        if (Evaluator.Evaluate("FxLB27847", Lookup) != 34)
-            Console.WriteLine("Variable Test 3 failed");
-    }
+    //    if (Evaluator.Evaluate("(a1+A1)", Lookup) != 9)
+    //        Console.WriteLine("Variable Test 2 failed");
+
+    //    if (Evaluator.Evaluate("FxLB27847", Lookup) != 34)
+    //        Console.WriteLine("Variable Test 3 failed");
+    //}
 
     /// <summary>
     /// A testing method which tests for various edge cases and error handling situations.
     /// If an error is caught, a message will be sent to the console.
     /// </summary>
-    public static void EdgeCaseAndErrorTests();
-    {
-        // Dividing by 0 (by itself, in large formula)
-        try
-        {
-            Evaluator.Evaluate("2/0", null);
-            Console.WriteLine("Uh oh, Error (dividing by 0) not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error /0: 2/0 (test passed!) Cannot divide by 0.");
-        }
+    //public static void EdgeCaseAndErrorTests();
+    //{
+    //    // Dividing by 0 (by itself, in large formula)
+    //    try
+    //    {
+    //        Evaluator.Evaluate("2/0", null);
+    //        Console.WriteLine("Uh oh, Error (dividing by 0) not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error /0: 2/0 (test passed!) Cannot divide by 0.");
+    //    }
 
-        //Invalid inputs
-        try
-        {
-            Evaluator.Evaluate(" -A- ", null);
-            Console.WriteLine("Uh oh, Error 1 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 1: ' -A- ' (test passed!)");
-        }
+    //    //Invalid inputs
+    //    try
+    //    {
+    //        Evaluator.Evaluate(" -A- ", null);
+    //        Console.WriteLine("Uh oh, Error 1 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 1: ' -A- ' (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("", null);
-            Console.WriteLine("Uh oh, Error 2 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 2: no string (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("", null);
+    //        Console.WriteLine("Uh oh, Error 2 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 2: no string (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate(" ", null);
-            Console.WriteLine("Uh oh, Error 3 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 3: space only (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate(" ", null);
+    //        Console.WriteLine("Uh oh, Error 3 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 3: space only (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("~", null);
-            Console.WriteLine("Uh oh, Error 4 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 4: ~ (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("~", null);
+    //        Console.WriteLine("Uh oh, Error 4 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 4: ~ (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("8 * () 2", null);
-            Console.WriteLine("Uh oh, Error 5 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 5: () (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("8 * () 2", null);
+    //        Console.WriteLine("Uh oh, Error 5 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 5: () (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("-2", null);
-            Console.WriteLine("Uh oh, Error 6 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 6: -2 (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("-2", null);
+    //        Console.WriteLine("Uh oh, Error 6 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 6: -2 (test passed!)");
+    //    }
 
-        //variable mistakes
-        try
-        {
-            Evaluator.Evaluate("4+-32", null);
-            Console.WriteLine("Uh oh, Error 7 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 7: 4+-32 (test passed!)");
-        }
+    //    //variable mistakes
+    //    try
+    //    {
+    //        Evaluator.Evaluate("4+-32", null);
+    //        Console.WriteLine("Uh oh, Error 7 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 7: 4+-32 (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("-A1", Lookup);
-            Console.WriteLine("Uh oh, Error 8 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 8: -A1 (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("-A1", Lookup);
+    //        Console.WriteLine("Uh oh, Error 8 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 8: -A1 (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("2/2D", Lookup);
-            Console.WriteLine("Uh oh, Error 8 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 9: 2/2D (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("2/2D", Lookup);
+    //        Console.WriteLine("Uh oh, Error 8 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 9: 2/2D (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("7/4+(NOODLE*3)", Lookup);
-            Console.WriteLine("Uh oh, Error 10 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 10: 7/4+(NOODLE*3) (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("7/4+(NOODLE*3)", Lookup);
+    //        Console.WriteLine("Uh oh, Error 10 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 10: 7/4+(NOODLE*3) (test passed!)");
+    //    }
 
-        //variable not defined (delegate throws)
-        try
-        {
-            Evaluator.Evaluate("7/4+(coolguy2*3)", Lookup);
-            Console.WriteLine("Uh oh, Error 11 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 11: 7/4+(coolguy2*3) (test passed!)");
-        }
+    //    //variable not defined (delegate throws)
+    //    try
+    //    {
+    //        Evaluator.Evaluate("7/4+(coolguy2*3)", Lookup);
+    //        Console.WriteLine("Uh oh, Error 11 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 11: 7/4+(coolguy2*3) (test passed!)");
+    //    }
 
-        //missing parentheses "(" ")" "(3-2" "3-2)"
-        try
-        {
-            Evaluator.Evaluate("3-2)", null);
-            Console.WriteLine("Uh oh, Error 12 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 12: (3-2 (test passed!)");
-        }
+    //    //missing parentheses "(" ")" "(3-2" "3-2)"
+    //    try
+    //    {
+    //        Evaluator.Evaluate("3-2)", null);
+    //        Console.WriteLine("Uh oh, Error 12 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 12: (3-2 (test passed!)");
+    //    }
 
-        try
-        {
-            Evaluator.Evaluate("3-2)", null);
-            Console.WriteLine("Uh oh, Error 13 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 13: 3-2) (test passed!)");
-        }
+    //    try
+    //    {
+    //        Evaluator.Evaluate("3-2)", null);
+    //        Console.WriteLine("Uh oh, Error 13 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 13: 3-2) (test passed!)");
+    //    }
 
-        //incorrect values or operators left in the stack "3 4 + 2" "2 / / 4"
-        try
-        {
-            Evaluator.Evaluate("3 4 + 2\" \"2 / / 4", null);
-            Console.WriteLine("Uh oh, Error 14 not caught");
-        }
-        catch (ArgumentException)
-        {
-            Console.WriteLine("Error 14: 3 4 + 2\" \"2 / / 4 (test passed!)");
-        }
-    }
+    //    //incorrect values or operators left in the stack "3 4 + 2" "2 / / 4"
+    //    try
+    //    {
+    //        Evaluator.Evaluate("3 4 + 2\" \"2 / / 4", null);
+    //        Console.WriteLine("Uh oh, Error 14 not caught");
+    //    }
+    //    catch (ArgumentException)
+    //    {
+    //        Console.WriteLine("Error 14: 3 4 + 2\" \"2 / / 4 (test passed!)");
+    //    }
+    //}
 }

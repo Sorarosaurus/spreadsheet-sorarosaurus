@@ -3,14 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaEvaluator", "FormulaEvaluator\FormulaEvaluator.csproj", "{555E1AE3-D6DE-420A-8257-6078486A3A71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaEvaluator", "FormulaEvaluator\FormulaEvaluator.csproj", "{555E1AE3-D6DE-420A-8257-6078486A3A71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D46BC86-9C9C-44FC-9CF0-BE565819BD72}"
 	ProjectSection(SolutionItems) = preProject
 		README.txt = README.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaEvaluatorTester", "FormulaEvaluatorTester\FormulaEvaluatorTester.csproj", "{2646678D-C64D-496B-8AB1-2757DC260E35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaEvaluatorTester", "FormulaEvaluatorTester\FormulaEvaluatorTester.csproj", "{2646678D-C64D-496B-8AB1-2757DC260E35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyGraph", "DependencyGraph\DependencyGraph.csproj", "{1B35292D-B3E4-4B71-B6A1-2C8D73AABDFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyGraphTests", "DependencyGraphTests\DependencyGraphTests.csproj", "{F3224BF2-D0CD-46FC-95F1-4C37B91ECCE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,14 @@ Global
 		{2646678D-C64D-496B-8AB1-2757DC260E35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2646678D-C64D-496B-8AB1-2757DC260E35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2646678D-C64D-496B-8AB1-2757DC260E35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B35292D-B3E4-4B71-B6A1-2C8D73AABDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B35292D-B3E4-4B71-B6A1-2C8D73AABDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B35292D-B3E4-4B71-B6A1-2C8D73AABDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B35292D-B3E4-4B71-B6A1-2C8D73AABDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3224BF2-D0CD-46FC-95F1-4C37B91ECCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3224BF2-D0CD-46FC-95F1-4C37B91ECCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3224BF2-D0CD-46FC-95F1-4C37B91ECCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3224BF2-D0CD-46FC-95F1-4C37B91ECCE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
